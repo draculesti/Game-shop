@@ -10,11 +10,13 @@ const discount = calculateDiscounts(total);
 const shipments = calculateShipping(productsArray)  ;
 const isVip = typeOfCliente(total, productsArray);
 
+
 console.log(`Hi ${name}`);
 console.log(`Shipping cost: ${shipments == -1 ? `You need to buy at least three products `: shipments} `);
 console.log(`Your discount is :${discount}`);
 if (discount === 12 || discount === 5)  total = total - ((total* discount)/100);
 if(shipments === 15 ) total = total + 15;
 console.log( `Total : ${total}`);
+if(isVip) console.log('You are a vip client');
 
 
